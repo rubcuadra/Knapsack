@@ -14,7 +14,7 @@ public class Main
 
     static int capacity = 0;
     static List<SackItem> possible_items = new ArrayList<SackItem>();  //Se leen del archivo
-    static HashMap<Integer,Sack> memoizations = new <Integer,Sack>HashMap(); //Programacion Dinamica
+    static HashMap<Integer,Sack> memoizations = new HashMap<Integer,Sack>(); //Programacion Dinamica
 
     public static void main(String[] args)
     {
