@@ -12,6 +12,8 @@ public class Main
     private static final String small_path="src/com/company/P3Knapsack_peque.txt";
     private static final String big_path="src/com/company/P3Knapsack_grande.txt";
 
+    private static final String[] files = {small_path,big_path};
+
     static int capacity = 0;
     static List<SackItem> possible_items = new ArrayList<>();  //Se leen del archivo
     static HashMap<Integer,Sack> memoizations = new HashMap(); //Programacion Dinamica
@@ -22,8 +24,15 @@ public class Main
         setValues(small_path);
         //setValues(big_path);
 
-        //System.out.println( getSack(possible_items.size()-1,capacity));
+        int start = (int) System.currentTimeMillis();
+        System.out.println( getSack(possible_items.size()-1,capacity));
+        int _final = (int) (System.currentTimeMillis() - start);
+        System.out.println("Recursive: "+(double)+_final/1000+" Segundos");
+
+        start = (int) System.currentTimeMillis();
         System.out.println( getMemoizationSack(possible_items.size()-1,capacity));
+        _final = (int) (System.currentTimeMillis() - start);
+        System.out.println("Memoization: "+(double)+_final/1000+" Segundos");
     }
 
     private static Sack getSack(int indexItem, int W )
