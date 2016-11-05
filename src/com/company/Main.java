@@ -6,9 +6,9 @@ import java.util.*;
 
 public class Main
 {
-    private static final String test_path="src/com/company/P3Knapsack_test.txt";
-    private static final String small_path="src/com/company/P3Knapsack_peque.txt";
-    private static final String big_path="src/com/company/P3Knapsack_grande.txt";
+    private static final String test_path="com/company/P3Knapsack_test.txt";
+    private static final String small_path="com/company/P3Knapsack_peque.txt";
+    private static final String big_path="com/company/P3Knapsack_grande.txt";
 
     private static final String[] files = {small_path,big_path};
 
