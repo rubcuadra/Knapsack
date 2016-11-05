@@ -1,7 +1,5 @@
 package com.company;
 
-import com.sun.tools.javac.util.ArrayUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -15,8 +13,8 @@ public class Main
     private static final String[] files = {small_path,big_path};
 
     static int capacity = 0;
-    static List<SackItem> possible_items = new ArrayList<>();  //Se leen del archivo
-    static HashMap<Integer,Sack> memoizations = new HashMap(); //Programacion Dinamica
+    static List<SackItem> possible_items = new ArrayList<SackItem>();  //Se leen del archivo
+    static HashMap<Integer,Sack> memoizations = new <Integer,Sack>HashMap(); //Programacion Dinamica
 
     public static void main(String[] args)
     {

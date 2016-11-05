@@ -14,13 +14,13 @@ public class Sack
 
     Sack() //Empty
     {
-        this.items=new HashSet<>();
+        this.items=new HashSet<SackItem>();
         this.value=0;
     }
     Sack(SackItem si)
     {
         this.value=si.getValue();
-        this.items=new HashSet<>();
+        this.items=new HashSet<SackItem>();
         this.items.add(si);
     }
 
