@@ -10,17 +10,17 @@ public class Main
     private static final String small_path="com/company/P3Knapsack_peque.txt";
     private static final String big_path="com/company/P3Knapsack_grande.txt";
 
-    private static final String[] files = {small_path,big_path};
-
     static int capacity = 0;
     static List<SackItem> possible_items = new ArrayList<SackItem>();  //Se leen del archivo
     static HashMap<Integer,Sack> memoizations = new HashMap<Integer,Sack>(); //Programacion Dinamica
 
     public static void main(String[] args)
     {
-        //setValues(test_path);
-        setValues(small_path);
+        setValues(test_path);
+        //setValues(small_path);
         //setValues(big_path);
+
+        System.out.println( "Empezando Recursivo\n");
 
         int start = (int) System.currentTimeMillis();
         System.out.println( getSack(possible_items.size()-1,capacity));

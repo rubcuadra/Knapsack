@@ -14,6 +14,7 @@ public class Sack
 
     Sack() //Empty
     {
+
         this.items=new HashSet<SackItem>();
         this.value=0;
     }
