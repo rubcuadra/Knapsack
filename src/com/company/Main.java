@@ -58,12 +58,12 @@ public class Main
 
         if ( possible_items.get( indexItem ).getWeight() > W) //Si ya no cabe
         {
-            return getSack(indexItem-1, W);                   //Regresar la mejor del item anterior
+            return getMemoizationSack(indexItem-1, W);                   //Regresar la mejor del item anterior
         }
         else
         {
-            Sack prev = getSack(indexItem-1,W); //El mejor item anterior
-            Sack next = getSack(indexItem-1, W-possible_items.get(indexItem).getWeight())
+            Sack prev = getMemoizationSack(indexItem-1,W); //El mejor item anterior
+            Sack next = getMemoizationSack(indexItem-1, W-possible_items.get(indexItem).getWeight())
                     .join(new Sack(possible_items.get(indexItem)));
             //El anterior con menor espacio y agregamos este elemento como que esta en uso
             Sack max = prev.getValue()>next.getValue()?prev:next;
